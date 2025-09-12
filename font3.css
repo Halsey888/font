@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'elffont-rock';
+    src:  url('https://cdn.jsdelivr.net/gh/Halsey888/font@main/elffont-rock.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+  @keyframes 規則: 定義微妙的詭異效果 (壓暗版)
+*/
+@keyframes subtle-eldritch-effect {
+  0% {
+    transform: translate(0, 0) skew(0deg);
+    filter: blur(0px);
+    color: #4a6681; /* 灰藍色 */
+    text-shadow: 0 0 3px #1f2733; /* 接近黑色的深藍陰影 */
+  }
+  
+  25% {
+    transform: translate(1px, -0.5px) skew(0.5deg);
+    filter: blur(0.2px);
+    color: #5d7e9e; /* 稍亮的灰藍 */
+    text-shadow: 0 0 5px #263345;
+  }
+  
+  50% {
+    transform: translate(-0.5px, 1px) skew(-0.3deg);
+    filter: blur(0.1px);
+    color: #8c9eac; /* 偏淺的藍灰色，用作高光 */
+    text-shadow: 0 0 7px #2e4459;
+  }
+  
+  75% {
+    transform: translate(0.5px, -1px) skew(0.2deg);
+    filter: blur(0.2px);
+    color: #5d7e9e;
+    text-shadow: 0 0 5px #263345;
+  }
+  
+  100% {
+    transform: translate(0, 0) skew(0deg);
+    filter: blur(0px);
+    color: #4a6681;
+    text-shadow: 0 0 3px #1f2733;
+  }
+}
+
+/*
+  套用動畫到指定的 class
+*/
+.subtle-eldritch-word {
+  display: inline-block;
+  font-family: 'elffont-rock', serif;
+  font-weight: bold;
+  
+  /*
+    animation 屬性簡寫
+    - subtle-eldritch-effect: 動畫名稱
+    - 2s: 動畫持續時間
+    - ease-in-out: 動畫速度曲線
+    - infinite: 無限次循環
+    - alternate: 動畫在每個週期後反向播放
+  */
+  animation: subtle-eldritch-effect 2s ease-in-out infinite alternate;
+}
