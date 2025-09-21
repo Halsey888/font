@@ -1,0 +1,240 @@
+.zalgo-text {
+  font-family: 'Microsoft YaHei', 'Noto Sans', 'Arial Unicode MS', 'Segoe UI Symbol', sans-serif !important;
+}
+
+@font-face {
+    font-family: 'elffont-rock';
+    src:  url('https://cdn.jsdelivr.net/gh/Halsey888/font@main/elffont-rock.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'MasaFont-Medium'; /* 替換為你的字體名稱 */
+  src: url('https://cdn.jsdelivr.net/gh/Halsey888/font@main/MasaFont-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HYLuoHuaShiW'; /* 替換為你的字體名稱 */
+  src: url('https://cdn.jsdelivr.net/gh/Halsey888/font@main/HYLuoHuaShiW.ttf') format('truetype');
+}
+
+/*
+  @keyframes 規則: 定義微妙的詭異效果 (壓暗版)
+*/
+@keyframes subtle-eldritch-effect {
+  0% {
+    transform: translate(0, 0) skew(0deg);
+    filter: blur(0px);
+    color: #4a6681; /* 灰藍色 */
+    text-shadow: 0 0 3px #1f2733; /* 接近黑色的深藍陰影 */
+  }
+  
+  25% {
+    transform: translate(1px, -0.5px) skew(0.5deg);
+    filter: blur(0.2px);
+    color: #5d7e9e; /* 稍亮的灰藍 */
+    text-shadow: 0 0 5px #263345;
+  }
+  
+  50% {
+    transform: translate(-0.5px, 1px) skew(-0.3deg);
+    filter: blur(0.1px);
+    color: #8c9eac; /* 偏淺的藍灰色，用作高光 */
+    text-shadow: 0 0 7px #2e4459;
+  }
+  
+  75% {
+    transform: translate(0.5px, -1px) skew(0.2deg);
+    filter: blur(0.2px);
+    color: #5d7e9e;
+    text-shadow: 0 0 5px #263345;
+  }
+  
+  100% {
+    transform: translate(0, 0) skew(0deg);
+    filter: blur(0px);
+    color: #4a6681;
+    text-shadow: 0 0 3px #1f2733;
+  }
+}
+
+/*
+  套用動畫到指定的 class
+*/
+.subtle-eldritch-word {
+  display: inline-block;
+  font-family: 'elffont-rock', 'MasaFont-Medium', serif;
+  font-weight: bold;
+  
+  /*
+    animation 屬性簡寫
+    - subtle-eldritch-effect: 動畫名稱
+    - 2s: 動畫持續時間
+    - ease-in-out: 動畫速度曲線
+    - infinite: 無限次循環
+    - alternate: 動畫在每個週期後反向播放
+  */
+  animation: subtle-eldritch-effect 2s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-eldritch-effect2 {
+  0% {
+    transform: translate(0, 0) skew(0deg);
+    filter: blur(0px);
+    color: #883a48; /* 暗紅色 */
+    text-shadow: 0 0 3px #331518; /* 接近黑色的深紅陰影 */
+  }
+  
+  25% {
+    transform: translate(1px, -0.5px) skew(0.5deg);
+    filter: blur(0.2px);
+    color: #a44c5b; /* 稍亮的暗紅 */
+    text-shadow: 0 0 5px #4f1d24;
+  }
+  
+  50% {
+    transform: translate(-0.5px, 1px) skew(-0.3deg);
+    filter: blur(0.1px);
+    color: #bb6d7a; /* 偏淺的紅灰色，用作高光 */
+    text-shadow: 0 0 7px #6c2a33;
+  }
+  
+  75% {
+    transform: translate(0.5px, -1px) skew(0.2deg);
+    filter: blur(0.2px);
+    color: #a44c5b;
+    text-shadow: 0 0 5px #4f1d24;
+  }
+  
+  100% {
+    transform: translate(0, 0) skew(0deg);
+    filter: blur(0px);
+    color: #883a48;
+    text-shadow: 0 0 3px #331518;
+  }
+}
+
+.subtle-eldritch-word2 {
+  display: inline-block;
+  font-family: 'elffont-rock', 'MasaFont-Medium', serif;
+  font-weight: bolder;
+  
+  /*
+    animation 屬性簡寫
+    - subtle-eldritch-effect: 動畫名稱
+    - 2s: 動畫持續時間
+    - ease-in-out: 動畫速度曲線
+    - infinite: 無限次循環
+    - alternate: 動畫在每個週期後反向播放
+  */
+  animation: subtle-eldritch-effect2 2s ease-in-out infinite alternate;
+}
+
+.samurai {
+  display: inline-block;
+  font-family: 'elffont-rock', 'HYLuoHuaShiW', serif;
+}
+
+/*
+  新增: 蒼藍雷電動畫
+  animation-name: azure-lightning-effect
+*/
+@keyframes subtle-electric-current {
+  0%, 100% {
+    color: #3b5072; /* 深藍灰色，作為基底色 */
+    text-shadow:
+      0 0 1px #4a6681,
+      0 0 2px #5d7e9e;
+    transform: translate(0, 0);
+  }
+  
+  25% {
+    color: #4a6681;
+    text-shadow:
+      0 0 2px #5d7e9e,
+      0 0 4px #8c9eac;
+    transform: translate(0.5px, 0.5px);
+    filter: blur(0.2px);
+  }
+  
+  50% {
+    color: #5d7e9e;
+    text-shadow:
+      0 0 3px #8c9eac,
+      0 0 6px #bbdefb,
+      0 0 9px rgba(187, 222, 251, 0.4);
+    transform: translate(-0.5px, -0.5px);
+    filter: blur(0.1px);
+  }
+  
+  75% {
+    color: #4a6681;
+    text-shadow:
+      0 0 2px #5d7e9e,
+      0 0 4px #8c9eac;
+    transform: translate(0.5px, 0.5px);
+    filter: blur(0.2px);
+  }
+}
+
+/*
+  套用動畫到指定的 class
+*/
+.electric-text {
+  display: inline-block;
+  font-family: 'elffont-rock', 'genkai-mincho', serif;
+  font-weight: bolder;
+  
+  animation: subtle-electric-current 2s ease-in-out infinite alternate;
+}
+
+@keyframes vib-anim-1 {
+  0% {
+    color: #3b5072; /* 深藍灰色，作為基底色 */
+    text-shadow:
+      0 0 1px #4a6681,
+      0 0 2px #5d7e9e;
+    transform: skewX(-15deg);
+  }
+  5% {
+    color: #4a6681;
+    text-shadow:
+      0 0 2px #5d7e9e,
+      0 0 4px #8c9eac;
+    transform: skewX(15deg);
+    filter: blur(0.2px);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    color: #5d7e9e;
+    text-shadow:
+      0 0 3px #8c9eac,
+      0 0 6px #bbdefb,
+      0 0 9px rgba(187, 222, 251, 0.4);
+    transform: skewX(15deg);
+  }
+  20% {
+    color: #4a6681;
+    text-shadow:
+      0 0 2px #5d7e9e,
+      0 0 4px #8c9eac;
+    transform: skewX(0);
+    filter: blur(0.2px);
+  }
+  100% {
+    color: #3b5072; /* 深藍灰色，作為基底色 */
+    text-shadow:
+      0 0 1px #4a6681,
+      0 0 2px #5d7e9e;
+    transform: skewX(0);
+  }
+}
+
+.vib-1 {
+  -webkit-animation: 0.8s vib-anim-1 infinite alternate;
+          animation: 0.8s vib-anim-1 infinite alternate;
+  display: inline-block;
+}
