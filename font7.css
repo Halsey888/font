@@ -33,28 +33,28 @@
   25% {
     transform: translate(1px, -0.5px) skew(0.5deg);
     filter: blur(0.2px);
-    color: #5d7e9e; /* 稍亮的灰藍 */
+    color: #262626; /* 稍亮的灰藍 */
     text-shadow: 0 0 5px #263345;
   }
   
   50% {
     transform: translate(-0.5px, 1px) skew(-0.3deg);
     filter: blur(0.1px);
-    color: #8c9eac; /* 偏淺的藍灰色，用作高光 */
-    text-shadow: 0 0 7px #2e4459;
+    color: #5c2314; /* 偏淺的藍灰色，用作高光 */
+    text-shadow: 0 0 7px #59342e;
   }
   
   75% {
     transform: translate(0.5px, -1px) skew(0.2deg);
     filter: blur(0.2px);
-    color: #5d7e9e;
+    color: #53150d;
     text-shadow: 0 0 5px #263345;
   }
   
   100% {
     transform: translate(0, 0) skew(0deg);
     filter: blur(0px);
-    color: 	#1f0704;
+    color: 	#350c06;
     text-shadow: 0 0 3px #1f2733;
   }
 }
@@ -65,7 +65,7 @@
 .subtle-eldritch-word {
   display: inline-block;
   font-family: 'elffont-rock', 'MasaFont-Medium', serif;
-  font-weight: bold;
+  font-weight: default;
   
   /*
     animation 屬性簡寫
