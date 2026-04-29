@@ -1,0 +1,49 @@
+/* 基礎容器樣式 */
+  .custom-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #fefefe);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    gap: 20px;
+  }
+
+  .left-part {
+    flex-shrink: 0;
+  }
+
+  .right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  /* 手機模式：寬度小於 500px 時觸發 */
+  @media (max-width: 500px) {
+    .custom-container {
+      flex-direction: column-reverse; /* 關鍵：將右側(影片)翻轉到上方 */
+      align-items: center;           /* 手機版改為居中對齊較好看 */
+      padding: 15px;
+      gap: 30px;                     /* 增加上下間距 */
+    }
+    
+    .left-part img, .right-part img {
+      width: 100%;                  /* 手機版圖片撐滿寬度 */
+      max-width: 300px;             /* 防止圖片在手機上過大 */
+    }
+
+    .right-part {
+      width: 100%;
+      align-items: center;          /* 影片跟標籤在手機版改為置中 */
+    }
+    
+    .right-part video {
+      max-width: 100% !important;
+    }
+  }
