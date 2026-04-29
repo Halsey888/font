@@ -24,8 +24,8 @@
     position: relative;
   }
 
-  /* 手機模式：寬度小於 500px 時觸發 */
-  @media (max-width: 500px) {
+  /* 手機模式：寬度小於 750px 時觸發 */
+  @media (max-width: 750px) {
     .custom-container {
       flex-direction: column-reverse; /* 關鍵：將右側(影片)翻轉到上方 */
       align-items: center;           /* 手機版改為居中對齊較好看 */
