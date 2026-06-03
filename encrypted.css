@@ -7,4 +7,5 @@
 /* 讓所有 p 標籤內的文字自動套用 */
 p {
     font-family: 'EncryptedFont', sans-serif;
+    white-space: pre-wrap;   /* 保留換行與空格，並自動換行 */
 }
