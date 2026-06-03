@@ -1,0 +1,11 @@
+/* encrypted.css */
+@font-face {
+    font-family: 'EncryptedFont';
+    src: url('https://cdn.jsdelivr.net/gh/Halsey888/font@main/encrypted_font.woff2') format('woff2');
+}
+
+/* 讓所有 p 標籤內的文字自動套用 */
+p {
+    font-family: 'EncryptedFont', sans-serif;
+    white-space: pre-wrap;   /* 保留換行與空格，並自動換行 */
+}
